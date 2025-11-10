@@ -3,3 +3,8 @@ export { default as HomeIcon } from "./HomeIcon.jsx";
 export { default as ChatIcon } from "./ChatIcon.jsx";
 export { default as CodeIcon } from "./CodeIcon.jsx";
 export { default as ShopIcon } from "./ShopIcon.jsx";
+export { default as WebSimIcon } from "./WebSimIcon.jsx";
+export { default as ProfileIcon } from "./ProfileIcon.jsx";
+export { default as AdminIcon } from "./AdminIcon.jsx";
+export { default as SettingsIcon } from "./SettingsIcon.jsx";
+export { default as SendIcon } from "./SendIcon.jsx";
