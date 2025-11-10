@@ -1,8 +1,5 @@
-import React, { useState, useEffect } from "react";
-import CodeTabs from "./CodeTabs";
-import PreviewPane from "./PreviewPane";
-import { Play, Save } from "lucide-react";
-import { api } from "@/utils/api";
+import { Play, Save, Share2, Download } from "lucide-react";
+// ...
 
 export default function WebSimulator() {
   const [html, setHtml] = useState("<h1>Hello ALPHA LAN!</h1>");
@@ -10,6 +7,7 @@ export default function WebSimulator() {
   const [js, setJs] = useState("console.log('WebSim Ready!')");
   const [outputSrc, setOutputSrc] = useState("");
   const [isRunning, setIsRunning] = useState(false);
+  const [shareUrl, setShareUrl] = useState(null);
 
   const runCode = () => {
     setIsRunning(true);
@@ -39,7 +37,33 @@ export default function WebSimulator() {
     }
   };
 
-  // Auto-run on changes (debounced)
+  const handleShare = async () => {
+    try {
+      const res = await api.post("/websim/share", { html, css, js });
+      const { shareId } = res.data;
+      const localUrl = `${window.location.origin}/websim/shared/${shareId}`;
+      setShareUrl(localUrl);
+      alert(`Your project is live on LAN!\nURL: ${localUrl}`);
+    } catch {
+      alert("Failed to share project.");
+    }
+  };
+
+  const handleExport = async () => {
+    try {
+      const res = await api.post("/websim/export", { html, css, js }, { responseType: "blob" });
+      const url = window.URL.createObjectURL(new Blob([res.data]));
+      const link = document.createElement("a");
+      link.href = url;
+      link.setAttribute("download", "websim_project.zip");
+      document.body.appendChild(link);
+      link.click();
+      link.remove();
+    } catch {
+      alert("Export failed. Try again.");
+    }
+  };
+
   useEffect(() => {
     const timeout = setTimeout(runCode, 700);
     return () => clearTimeout(timeout);
@@ -47,7 +71,6 @@ export default function WebSimulator() {
 
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 h-[85vh] gap-4 p-4">
-      {/* Left: Code Editor */}
       <div className="flex flex-col space-y-3">
         <div className="flex justify-between items-center">
           <h2 className="text-xl font-semibold text-gray-800 dark:text-gray-100">
@@ -69,13 +92,33 @@ export default function WebSimulator() {
               <Save size={16} />
               <span>Save</span>
             </button>
+            <button
+              onClick={handleShare}
+              className="px-3 py-1 bg-purple-600 hover:bg-purple-700 text-white rounded-md flex items-center space-x-1 transition"
+            >
+              <Share2 size={16} />
+              <span>Share</span>
+            </button>
+            <button
+              onClick={handleExport}
+              className="px-3 py-1 bg-amber-600 hover:bg-amber-700 text-white rounded-md flex items-center space-x-1 transition"
+            >
+              <Download size={16} />
+              <span>Export</span>
+            </button>
           </div>
         </div>
 
-        <CodeTabs html={html} setHtml={setHtml} css={css} setCss={setCss} js={js} setJs={setJs} />
+        <CodeTabs
+          html={html}
+          setHtml={setHtml}
+          css={css}
+          setCss={setCss}
+          js={js}
+          setJs={setJs}
+        />
       </div>
 
-      {/* Right: Preview */}
       <PreviewPane srcDoc={outputSrc} />
     </div>
   );
