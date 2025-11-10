@@ -1,0 +1,144 @@
+devconnect-lan/
+│
+├── README.md
+├── package.json
+├── .gitignore
+├── .env
+│
+├── client/                          # Frontend (React)
+│   ├── public/
+│   │   ├── index.html
+│   │   ├── favicon.ico
+│   │   └── manifest.json
+│   │
+│   ├── src/
+│   │   ├── App.jsx
+│   │   ├── main.jsx
+│   │   │
+│   │   ├── assets/
+│   │   │   ├── icons/
+│   │   │   ├── images/
+│   │   │   └── themes/
+│   │   │
+│   │   ├── components/
+│   │   │   ├── Chat/
+│   │   │   │   ├── ChatWindow.jsx
+│   │   │   │   ├── ChatSidebar.jsx
+│   │   │   │   ├── MessageBubble.jsx
+│   │   │   │   └── GroupChatModal.jsx
+│   │   │   │
+│   │   │   ├── IDE/
+│   │   │   │   ├── CodeEditor.jsx
+│   │   │   │   ├── OutputConsole.jsx
+│   │   │   │   ├── FileExplorer.jsx
+│   │   │   │   └── CollaboratePanel.jsx
+│   │   │   │
+│   │   │   ├── Shop/
+│   │   │   │   ├── ShopList.jsx
+│   │   │   │   ├── CodeCard.jsx
+│   │   │   │   ├── UploadModal.jsx
+│   │   │   │   └── ShopDetails.jsx
+│   │   │   │
+│   │   │   ├── WebSim/
+│   │   │   │   ├── WebSimulator.jsx
+│   │   │   │   ├── PreviewPane.jsx
+│   │   │   │   └── CodeTabs.jsx
+│   │   │   │
+│   │   │   ├── Profile/
+│   │   │   │   ├── ProfilePage.jsx
+│   │   │   │   ├── AvatarUpload.jsx
+│   │   │   │   └── Badges.jsx
+│   │   │   │
+│   │   │   ├── Admin/
+│   │   │   │   ├── Dashboard.jsx
+│   │   │   │   ├── UserManagement.jsx
+│   │   │   │   └── AnalyticsPanel.jsx
+│   │   │   │
+│   │   │   └── Common/
+│   │   │       ├── Navbar.jsx
+│   │   │       ├── Sidebar.jsx
+│   │   │       ├── Button.jsx
+│   │   │       └── Modal.jsx
+│   │   │
+│   │   ├── pages/
+│   │   │   ├── Home.jsx
+│   │   │   ├── Chat.jsx
+│   │   │   ├── IDE.jsx
+│   │   │   ├── Shop.jsx
+│   │   │   ├── WebSim.jsx
+│   │   │   ├── Profile.jsx
+│   │   │   └── Admin.jsx
+│   │   │
+│   │   ├── hooks/
+│   │   │   ├── useAuth.js
+│   │   │   ├── useSocket.js
+│   │   │   └── useTheme.js
+│   │   │
+│   │   ├── context/
+│   │   │   ├── AuthContext.jsx
+│   │   │   ├── ThemeContext.jsx
+│   │   │   └── ChatContext.jsx
+│   │   │
+│   │   ├── utils/
+│   │   │   ├── api.js
+│   │   │   ├── formatDate.js
+│   │   │   └── constants.js
+│   │   │
+│   │   └── styles/
+│   │       ├── tailwind.css
+│   │       └── globals.css
+│   │
+│   └── vite.config.js
+│
+├── server/                          # Backend (Node.js + Express)
+│   ├── server.js
+│   ├── config/
+│   │   ├── db.js
+│   │   ├── socket.js
+│   │   └── compiler.js
+│   │
+│   ├── models/
+│   │   ├── User.js
+│   │   ├── Message.js
+│   │   ├── CodeProject.js
+│   │   ├── Challenge.js
+│   │   └── Badge.js
+│   │
+│   ├── routes/
+│   │   ├── authRoutes.js
+│   │   ├── chatRoutes.js
+│   │   ├── ideRoutes.js
+│   │   ├── shopRoutes.js
+│   │   ├── webSimRoutes.js
+│   │   ├── adminRoutes.js
+│   │   └── profileRoutes.js
+│   │
+│   ├── controllers/
+│   │   ├── authController.js
+│   │   ├── chatController.js
+│   │   ├── ideController.js
+│   │   ├── shopController.js
+│   │   ├── webSimController.js
+│   │   ├── adminController.js
+│   │   └── profileController.js
+│   │
+│   ├── middleware/
+│   │   ├── authMiddleware.js
+│   │   ├── errorHandler.js
+│   │   └── roleCheck.js
+│   │
+│   ├── utils/
+│   │   ├── fileManager.js
+│   │   ├── sandbox.js
+│   │   ├── compilerService.js
+│   │   ├── socketEvents.js
+│   │   └── logger.js
+│   │
+│   └── data/
+│       ├── badges.json
+│       └── challenges.json
+│
+└── database/
+    ├── migrations/
+    ├── seeders/
+    └── devconnect.db
