@@ -1,0 +1,82 @@
+[
+  {
+    "id": "first-login",
+    "name": "Welcome Aboard",
+    "description": "Logged in for the first time on ALPHA LAN.",
+    "icon": "welcome.svg",
+    "xp": 50,
+    "category": "onboarding"
+  },
+  {
+    "id": "night-coder",
+    "name": "Night Coder",
+    "description": "Active between midnight and 3 AM for 3 consecutive nights.",
+    "icon": "night.svg",
+    "xp": 150,
+    "category": "activity"
+  },
+  {
+    "id": "bug-slayer",
+    "name": "Bug Slayer",
+    "description": "Fixed 5 bugs in shared projects.",
+    "icon": "bug.svg",
+    "xp": 200,
+    "category": "contribution"
+  },
+  {
+    "id": "code-master",
+    "name": "Code Master",
+    "description": "Completed 10 coding challenges successfully.",
+    "icon": "code.svg",
+    "xp": 300,
+    "category": "learning"
+  },
+  {
+    "id": "team-player",
+    "name": "Team Player",
+    "description": "Collaborated with 3 or more users on a shared project.",
+    "icon": "team.svg",
+    "xp": 180,
+    "category": "social"
+  },
+  {
+    "id": "shop-keeper",
+    "name": "Shop Keeper",
+    "description": "Uploaded your first project to the Code Shop.",
+    "icon": "shop.svg",
+    "xp": 120,
+    "category": "marketplace"
+  },
+  {
+    "id": "reviewer",
+    "name": "Helpful Reviewer",
+    "description": "Left 5 or more constructive reviews on others’ projects.",
+    "icon": "review.svg",
+    "xp": 100,
+    "category": "community"
+  },
+  {
+    "id": "challenge-champion",
+    "name": "Challenge Champion",
+    "description": "Won a LAN hackathon or coding challenge.",
+    "icon": "trophy.svg",
+    "xp": 500,
+    "category": "achievement"
+  },
+  {
+    "id": "mentor",
+    "name": "Mentor",
+    "description": "Helped a new developer via the AI Tutor or mentoring channel.",
+    "icon": "mentor.svg",
+    "xp": 250,
+    "category": "social"
+  },
+  {
+    "id": "alpha-legend",
+    "name": "Alpha Legend",
+    "description": "Reached Level 50 or higher on ALPHA LAN.",
+    "icon": "legend.svg",
+    "xp": 1000,
+    "category": "milestone"
+  }
+]
