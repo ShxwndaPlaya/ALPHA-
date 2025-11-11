@@ -21,14 +21,3 @@ export default function useAuth() {
 
   return context;
 }
-import useAuth from "@/hooks/useAuth";
-
-function Example() {
-  const { currentUser, logout } = useAuth();
-  return (
-    <div>
-      <p>Hello, {currentUser?.username}</p>
-      <button onClick={logout}>Logout</button>
-    </div>
-  );
-}
