@@ -1,0 +1,140 @@
+[
+  {
+    "id": "hello-world",
+    "title": "Hello, ALPHA!",
+    "description": "Write a program that prints 'Hello, ALPHA LAN!' to the console.",
+    "difficulty": "beginner",
+    "language": "python",
+    "xp": 50,
+    "starterCode": "print('')",
+    "testCases": [
+      {
+        "input": "",
+        "output": "Hello, ALPHA LAN!"
+      }
+    ],
+    "tags": ["basics", "output"]
+  },
+  {
+    "id": "sum-two-numbers",
+    "title": "Sum of Two Numbers",
+    "description": "Write a function that takes two numbers and returns their sum.",
+    "difficulty": "beginner",
+    "language": "javascript",
+    "xp": 100,
+    "starterCode": "function add(a, b) {\n  // your code here\n}",
+    "testCases": [
+      { "input": "2 3", "output": "5" },
+      { "input": "-1 6", "output": "5" }
+    ],
+    "tags": ["math", "functions"]
+  },
+  {
+    "id": "reverse-string",
+    "title": "Reverse a String",
+    "description": "Reverse any given string input by the user.",
+    "difficulty": "intermediate",
+    "language": "python",
+    "xp": 150,
+    "starterCode": "def reverse_string(s):\n    # your code here\n    pass",
+    "testCases": [
+      { "input": "alpha", "output": "ahpla" },
+      { "input": "lan", "output": "nal" }
+    ],
+    "tags": ["strings", "loops"]
+  },
+  {
+    "id": "prime-check",
+    "title": "Prime Number Checker",
+    "description": "Determine if a given number is prime.",
+    "difficulty": "intermediate",
+    "language": "c++",
+    "xp": 200,
+    "starterCode": "#include <iostream>\nusing namespace std;\n\nint main() {\n  int n; cin >> n;\n  // your code here\n  return 0;\n}",
+    "testCases": [
+      { "input": "5", "output": "Prime" },
+      { "input": "8", "output": "Not Prime" }
+    ],
+    "tags": ["math", "loops", "conditionals"]
+  },
+  {
+    "id": "fizzbuzz",
+    "title": "FizzBuzz Challenge",
+    "description": "Print numbers from 1 to N. For multiples of 3 print 'Fizz', for 5 print 'Buzz', and for both print 'FizzBuzz'.",
+    "difficulty": "intermediate",
+    "language": "javascript",
+    "xp": 200,
+    "starterCode": "function fizzbuzz(n) {\n  // your code here\n}",
+    "testCases": [
+      { "input": "5", "output": "1\n2\nFizz\n4\nBuzz" }
+    ],
+    "tags": ["loops", "logic"]
+  },
+  {
+    "id": "palindrome",
+    "title": "Palindrome Checker",
+    "description": "Check if a given word or number reads the same backward as forward.",
+    "difficulty": "advanced",
+    "language": "python",
+    "xp": 250,
+    "starterCode": "def is_palindrome(s):\n    # your code here\n    pass",
+    "testCases": [
+      { "input": "madam", "output": "True" },
+      { "input": "alpha", "output": "False" }
+    ],
+    "tags": ["strings", "algorithms"]
+  },
+  {
+    "id": "sort-array",
+    "title": "Sort the Array",
+    "description": "Sort an array of integers in ascending order without using built-in sort functions.",
+    "difficulty": "advanced",
+    "language": "java",
+    "xp": 300,
+    "starterCode": "public class SortArray {\n  public static void main(String[] args) {\n    // your code here\n  }\n}",
+    "testCases": [
+      { "input": "5 3 1 4 2", "output": "1 2 3 4 5" }
+    ],
+    "tags": ["arrays", "sorting", "logic"]
+  },
+  {
+    "id": "lan-broadcast",
+    "title": "LAN Message Broadcast",
+    "description": "Simulate sending a broadcast message to all connected users over LAN.",
+    "difficulty": "advanced",
+    "language": "javascript",
+    "xp": 400,
+    "starterCode": "function broadcastMessage(users, message) {\n  // your code here\n}",
+    "testCases": [
+      { "input": "[Alice,Bob,Charlie] 'Hello!'", "output": "Message sent to 3 users" }
+    ],
+    "tags": ["networking", "simulation"]
+  },
+  {
+    "id": "matrix-multiply",
+    "title": "Matrix Multiplication",
+    "description": "Multiply two matrices of compatible dimensions.",
+    "difficulty": "expert",
+    "language": "python",
+    "xp": 500,
+    "starterCode": "def multiply_matrices(a, b):\n    # your code here\n    pass",
+    "testCases": [
+      {
+        "input": "[[1,2],[3,4]] [[5,6],[7,8]]",
+        "output": "[[19,22],[43,50]]"
+      }
+    ],
+    "tags": ["math", "arrays", "algorithms"]
+  },
+  {
+    "id": "lan-hackathon",
+    "title": "Mini Hackathon Challenge",
+    "description": "Create a simple LAN-based chat system prototype using sockets.",
+    "difficulty": "expert",
+    "language": "javascript",
+    "xp": 800,
+    "starterCode": "// Build your LAN chat system here",
+    "testCases": [],
+    "tags": ["networking", "fullstack", "challenge"]
+  }
+]
